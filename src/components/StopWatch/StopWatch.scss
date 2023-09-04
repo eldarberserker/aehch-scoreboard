@@ -1,0 +1,19 @@
+.stop-watch { 
+    margin-top: 80px;
+}
+
+.timer { 
+    font-size: 4rem; 
+    padding: 1rem; 
+    font-weight: 400; 
+}
+
+@media only screen and (max-width: 600px) {
+    .stop-watch {
+        margin-top: 0px;
+    }
+    
+    .timer { 
+        font-size: 4rem; 
+    }
+}

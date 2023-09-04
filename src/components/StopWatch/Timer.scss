@@ -1,0 +1,13 @@
+.timer { 
+    font-size: 6rem; 
+    padding: 1rem; 
+    font-weight: 400; 
+    font-family: 'Roboto Mono', monospace;
+    display: block; 
+}
+
+@media only screen and (max-width: 600px) {
+    .timer { 
+        font-size: 4rem; 
+    }
+}

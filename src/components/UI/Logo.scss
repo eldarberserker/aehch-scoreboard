@@ -1,0 +1,15 @@
+.mobile-logo { 
+    display: none;
+}
+.desktop-logo { 
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile-logo { 
+        display: block;
+    }
+    .desktop-logo {
+        display: none;
+    }
+}

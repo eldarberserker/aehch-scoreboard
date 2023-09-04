@@ -1,0 +1,41 @@
+.display {
+    position: relative;
+}
+
+.big-points {
+    font-size: 5rem;
+}
+
+.flags-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: left;
+    width: 45px;
+}
+
+.not-yet {
+    display: none;
+    visibility: hidden;
+}
+
+.yes-you-are {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #dead00;
+    background-color: #000;
+    font-size: 11rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .big-points {
+        padding-right: 2px;
+    }
+
+    .flags-container {
+        right: 5px;
+    }
+}
