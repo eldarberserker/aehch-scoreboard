@@ -46,7 +46,7 @@ const Player = (props) => {
             if( prevFlags.red >= 1 ) {
                 props.stopTimer(event);
                 return {...prevFlags, red: (prevFlags.red + 1), amIDead: 'yes-you-are'};
-            } else if ( prevFlags.red < 1 ) {
+            } else {
                 return {...prevFlags, red: (prevFlags.red + 1)};
             }
         });
@@ -70,7 +70,7 @@ const Player = (props) => {
         <div className={props.className}>
             <input type="text" className={player.inputClassName} placeholder={player.placeHolder} />
             <Display point={point} yellowFlag={flags.yellow} redFlag={flags.red} amIDead={flags.amIDead} />
-            <ControlButtons className="button" onClickHandler={addPointHandler} />
+            <ControlButtons className="button" onClickHandler={addPointHandler} aehchScores={props.aehchScores} />
             <FlagButtons addYellowFlag={addYellowFlagHandler} addRedFlag={addRedFlagHandler} />
         </div>
     );

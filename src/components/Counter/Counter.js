@@ -35,8 +35,8 @@ const Counter = (props) => {
     return (
         <div>
             <div className={classes}>
-                <Player key={players[0].className} className={players[0].className} data={players[0]} resetPoints={resetPointsP1} stopTimer={props.stopTimer} />
-                <Player key={players[1].className} className={players[1].className} data={players[1]} resetPoints={resetPointsP2} stopTimer={props.stopTimer} />
+                <Player key={players[0].className} className={players[0].className} data={players[0]} resetPoints={resetPointsP1} stopTimer={props.stopTimer} aehchScores={props.aehchScores} />
+                <Player key={players[1].className} className={players[1].className} data={players[1]} resetPoints={resetPointsP2} stopTimer={props.stopTimer} aehchScores={props.aehchScores} />
             </div>
             <Doubles doubles={props.doubles} addDouble={props.addDouble} resetDoubles={resetDoubles} />
             <div className="reset-all">

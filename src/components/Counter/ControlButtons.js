@@ -18,6 +18,14 @@ export default function ControlButtons(props) {
         { points: -3, label: '-3' },
         { points: -9, label: '-9' }
     ];
+
+    if(!props.aehchScores) {
+        buttons[1] = { points: 2, label: '+2' };
+        buttons[2] = { points: 3, label: '+3' };
+        buttons[4] = { points: -2, label: '-2' };
+        buttons[5] = { points: -3, label: '-3' };
+    }
+    
     
     return (
         <div className="point-control-buttons">

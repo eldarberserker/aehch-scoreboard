@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 import StopWatch from './components/StopWatch/StopWatch';
 import Counter from './components/Counter/Counter';
@@ -15,7 +15,7 @@ function App() {
     const resetStopWatch = useRef(null);
     const pauseStopWatch = useRef(null);
 
-
+    const [aehchScores, setAehchScores] = useState(true);
 
     const resetAllHandler = (event) => {
         event.preventDefault();
@@ -28,6 +28,11 @@ function App() {
         event.preventDefault();
 
         pauseStopWatch.current();
+    }
+
+    const configAehchScoreHandler = (event) => {
+        const newValue = event.target.attributes.rules.value === 'aehch';
+        setAehchScores(newValue);
     }
 
     return (
@@ -48,7 +53,13 @@ function App() {
                     <Counter className="row" 
                         resetCounters={resetCounters} 
                         resetAll={resetAllHandler}
-                        stopTimer={stopTimer} />
+                        stopTimer={stopTimer}
+                        aehchScores={aehchScores} />
+                    <div>
+                        <h3>Reglas Puntaje</h3>
+                        <button className={`button ${aehchScores ? 'active' : ''}`} rules="aehch" onClick={configAehchScoreHandler}>AEHCH</button>
+                        <button className={`button ${!aehchScores ? 'active' : ''}`} rules="international" onClick={configAehchScoreHandler}>Otros</button>
+                    </div>
                 </div>
             </div>
         </div>

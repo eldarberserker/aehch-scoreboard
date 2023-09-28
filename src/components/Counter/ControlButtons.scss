@@ -40,3 +40,11 @@
     border-color: #f8f9fa;
 }
 
+.button {
+    &.active {
+        color: #1f2d3d;
+        background-color: #f8f9fa;
+        border-color: #f8f9fa;
+    }
+}
+
