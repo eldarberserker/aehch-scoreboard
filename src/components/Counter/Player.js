@@ -26,12 +26,12 @@ const Player = (props) => {
     const addYellowFlagHandler = (event) => {
 
         setFlag(prevFlags => {
-            if( prevFlags.yellow === 2 ) {
+            if( prevFlags.yellow === 3 ) {
                 const totalRedFlags = (prevFlags.red + 1);
+                props.stopTimer(event); 
                 let shouldIKillPlayer = 'not-yet'
                 if( totalRedFlags > 1 ) {
                     shouldIKillPlayer = 'yes-you-are';
-                    props.stopTimer(event); 
                 }
 
                 return {...prevFlags, yellow: 0, red: totalRedFlags, amIDead: shouldIKillPlayer};

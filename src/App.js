@@ -45,7 +45,7 @@ function App() {
                     <StopWatch 
                         resetStopWatch={resetStopWatch}
                         pauseStopWatch={pauseStopWatch}
-                     />
+                    />
                     <Logo className="desktop-logo" />
                 </div>
                 <div className="col-7 expand-on-mobile">
